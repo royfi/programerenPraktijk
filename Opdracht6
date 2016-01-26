@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Opdracht6
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void inputSeconden_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outputTijd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+           
+            
+
+        }
+
+        private void berekenTijd_Click(object sender, EventArgs e)
+        {
+            int startSeconde =  Convert.ToInt32(inputSeconden.Text);
+            int uren = startSeconde / 3600;
+            int tussenSeconde = startSeconde - uren * 3600;
+            int minuten = tussenSeconde / 60;
+            int seconden = tussenSeconde - minuten * 60;
+            outputTijd.Text = Convert.ToString(uren) + ":" + Convert.ToString(minuten) + ":" + Convert.ToString(seconden);
+
+        }
+    }
+}

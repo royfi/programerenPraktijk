@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double btw = 0.21;
+            Console.Write("Prijs ");
+            string invoer = Console.ReadLine();
+            double prijs = double.Parse(invoer);
+            double btwProduct = prijs*btw;
+            double totaalPrijs = prijs + btwProduct;
+            Console.Write(" Prijs " + prijs);
+            Console.Write(" btw " + btwProduct);
+            Console.Write(" totale prijs " + totaalPrijs);
+            Console.ReadKey();
+
+
+        }
+    }
+}

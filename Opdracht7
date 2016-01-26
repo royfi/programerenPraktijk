@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Opdracht7
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bedragenBerekenen_Click(object sender, EventArgs e)
+        {
+            double afstandDouble = Convert.ToDouble(inputEind.Text) - Convert.ToDouble(inputBegin.Text);
+            double prijsDouble = afstandDouble * Convert.ToDouble(inputPrijs.Text);
+            double btwDouble = prijsDouble * 0.21;
+            double totaalPrijsDouble = prijsDouble * btwDouble;
+            prijs.Text = Convert.ToString(prijsDouble);
+            btw.Text = Convert.ToString(btwDouble);
+            totaalPrijs.Text = Convert.ToString(totaalPrijsDouble);
+        }
+
+        private void wissen_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
