@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Opdracht3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Voer het aantal seconden in ");
+            string invoer = Console.ReadLine();
+            int startSeconde = Int32.Parse(invoer);
+            int uren = startSeconde / 3600;
+            int tussenSeconde = startSeconde - uren * 3600;
+            int minuten = tussenSeconde / 60;
+            int seconden = tussenSeconde - minuten * 60;
+            Console.Write(uren + "H:" + minuten + "M:" + seconden + "S");
+            Console.ReadKey();
+
+ 
+        }
+    }
+}
