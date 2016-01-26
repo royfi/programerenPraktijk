@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Opdracht8
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void berekenen_Click(object sender, EventArgs e)
+        {
+            const double prijsTshirt = 30;
+            const double prijsBroek = 100;
+            double kostenTshirt = prijsTshirt * Convert.ToDouble(aantalTshirts.Text);
+            double kostenBroek = prijsBroek * Convert.ToDouble(aantalBroeken.Text);
+            double prijsDouble = kostenBroek + kostenTshirt;
+            double btwDouble = prijsDouble * 0.21;
+            double totaalPrijsDouble = prijsDouble + btwDouble;
+            prijs.Text = "€ " + prijsDouble.ToString("0.00");
+            btw.Text= "€ " + btwDouble.ToString("0.00");
+            totaalPrijs.Text= "€ " + totaalPrijsDouble.ToString("0.00");
+            datum.Text = Convert.ToString(DateTime.Today);
+        }
+
+        private void rekening_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
