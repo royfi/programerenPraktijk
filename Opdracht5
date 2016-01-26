@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Opdracht5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+        
+
+
+        }
+
+        private void berekenGemiddelde_Click(object sender, EventArgs e)
+        {
+            double gem1 = Convert.ToDouble(invoerGetal1.Text);
+            double gem2 = Convert.ToDouble(invoerGetal2.Text);
+            double gem3 = Convert.ToDouble(invoerGetal3.Text);
+            double eindGem = (gem1 + gem2 + gem3) / 3;
+            outputGemiddelde.Text = eindGem.ToString("0.00");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
