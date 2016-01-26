@@ -1,1 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace Week3Opdracht1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Voer het eerste getal in");
+            string invoer1 = Console.ReadLine();
+            Console.WriteLine("Voer het tweede getal in");
+            string invoer2 = Console.ReadLine();
+            int getal1 = Int32.Parse(invoer1);
+            int getal2 = Int32.Parse(invoer2);
+
+            if (getal1 > getal2) 
+            {
+                Console.WriteLine("Het grootste getal is " + invoer1);
+                Console.WriteLine("Het kleinste getal is " + invoer2);
+            }
+            else 
+            {
+               Console.WriteLine("Het grootste getal is " + invoer2);
+                Console.WriteLine("Het kleinste getal is " + invoer1);
+            }
+            Console.ReadKey(); 
+        }
+    }
+ }
